@@ -10,12 +10,12 @@ class TaskController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     *Task一覧
+     * @return \Illuminate\Support\Collection
      */
     public function index()
     {
-        //
+        return Task::orderByDesc('id')->get();
     }
 
     /**
